@@ -1,0 +1,17 @@
+node_modules/
+.tmp.drivedownload/
+.tmp.driveupload/
+.metadata/
+bin/
+.settings/
+.classpath/
+.project/
+bin/
+obj/
+.config/
+package-lock.json/
+wwwroot/
+
+
+
+
