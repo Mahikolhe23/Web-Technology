@@ -1,9 +1,10 @@
 import React from 'react'
-function Details() {
+function Register() {
     return (
         <div>
             <form>
-                <table>
+                <h3>Register</h3>
+                <table style={{ textAlign: "left" }}>
                     <tr>
                         <td><lable>Roll No : </lable></td>
                         <td><input type="number" name="rollno" ></input></td>
@@ -35,4 +36,4 @@ function Details() {
     )
 }
 
-export default Details
+export default Register

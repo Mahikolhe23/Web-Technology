@@ -1,9 +1,8 @@
 .wrapper,
-html,
 body {
-  height: 100%;
-  margin: 20px;
-  padding: 20px;
+  height: 400px;
+  margin: 5px;
+  padding: 10px;
 }
 
 .wrapper {
@@ -18,5 +17,9 @@ body {
 
 .main {
   background-color: rgb(226, 167, 221);
+  flex: 1
+}
+.second{
+  background-color: rgb(231, 120, 157);
   flex: 1
 }

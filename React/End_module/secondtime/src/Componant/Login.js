@@ -2,7 +2,8 @@ import React from 'react'
 function Login() {
     return (
         <div>
-            <form>
+            <form >
+                <h3>Login</h3>
                 <table style={{ textAlign: "left" }}>
                     <tr>
                         <td><lable>PRN : </lable></td>
