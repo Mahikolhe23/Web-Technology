@@ -1,5 +1,6 @@
 import React from 'react'
 import './Details.css';
+import Home from './Home';
 function Details() {
     return (
         <div>
@@ -31,6 +32,7 @@ function Details() {
                     </tr>
                 </table>
             </form>
+
         </div>
     )
 }

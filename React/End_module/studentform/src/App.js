@@ -1,15 +1,9 @@
-import './App.css';
-import Registration from './componant/Registration';
-import Login from './componant/Login';
-import Details from './componant/Details';
+import WebRouter from "./WebRouter"
 
 function App() {
-  // Login = () => {
-  //   <Login></Login>
-  // }
   return (
     <div className="App">
-      <button onClick={Login()}>Login</button>
+      <WebRouter></WebRouter>
     </div>
   );
 }
