@@ -1,0 +1,134 @@
+<html>
+
+<body style="border: 2px solid;border-color: blue;" width="100%">
+    <table align="center">
+        <form>
+            <tr>
+                <th align="left" style="font-size: 30;">Internet Uses Survey</th>
+            </tr>
+            <tr>
+                <td>
+                    This survey is being conducted to help identify the Internet usage patterns of our customers.</td>
+                <br>
+            </tr>
+            <tr>
+                <td>
+                    Please take a few moments to complete and submit this short form. Thank you for your cooperation.
+                </td>
+            </tr>
+            <tr style="height: 5;"></tr>
+            <tr>
+                <td>
+                    <label for="option">What type of Internet connection do you have ?<br>(select one)</label>
+                </td>
+                <td>
+                    <select name="option" id="option" size="4">
+                        <option value="Dial-up">Dial-up</option>
+                        <option value="DSL">DSL</option>
+                        <option value="High Speed Cable">High Speed Cable</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="height: 5;"></tr>
+            <tr>
+                <td>
+                    <label for="device">What type of computer do you use most</label>
+                </td>
+                <td>
+                    <input type="radio" name="device" id="device">
+                    <label for="Desktop">Desktop</label>
+                    <input type="radio" name="device" id="device1">
+                    <label for="device1">Laptop</label>
+                </td>
+            </tr>
+            <tr style="height: 5;"></tr>
+            <tr>
+                <td>
+                    <label for="reason">How do you described your main reason for using the Internet</label>
+                </td>
+                <td>
+                    <input type="radio" name="reason" id="work">
+                    <label for="work">To do work related activities</label><br>
+                    <input type="radio" name="reason" id="school">
+                    <label for="school">To do school related activities</label><br>
+                    <input type="radio" name="reason" id="enter">
+                    <label for="enter">For entertainment purpose</label><br>
+                    <input type="radio" name="reason" id="other">
+                    <label for="other">other activities</label>
+                </td>
+            </tr>
+            <tr style="height: 5;"></tr>
+            <tr>
+                <td>
+                    <fieldset style="width: 500; height: 150px;">
+                        <legend>Type of sites visited</legend>
+                        What types of web sites do you access most often?<br>Check all that apply.<br>
+                        <input type="checkbox" name="option" id="self-improvement">
+                        <label for="self-improvement">self-improvement</label><br>
+                        <input type="checkbox" name="option" id="entertainment">
+                        <label for="entertainment">entertainment</label><br>
+                        <input type="checkbox" name="option" id="news and sports">
+                        <label for="news and sports">news and sports</label> <br>
+                        <input type="checkbox" name="option" id="references">
+                        <label for="references">references</label><br>
+                        <input type="checkbox" name="option" id="Email">
+                        <label for="Email">Email</label>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset style="width: 500; height: 150px;">
+                        <legend>Time spent using Internet</legend>
+                        During an avg week how long do you spend online?<br>
+                        <input type="radio" name="option" id="0-3">
+                        <label for="0-3">0-3 Hrs</label><br>
+                        <input type="radio" name="option" id="4-6">
+                        <label for="4-6">4-6 Hrs</label><br>
+                        <input type="radio" name="option" id="7-10">
+                        <label for="7-10">7-10 Hrs</label><br>
+                        <input type="radio" name="option" id="11-14">
+                        <label for="11-14">11-14 Hrs</label><br>
+                        <input type="radio" name="option" id="15+">
+                        <label for="15+">15+ Hrs</label>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr style="height: 5;"></tr>
+            <tr>
+                <td align="left">
+                    Please comment on your opinions concerning Internet privacy and safety.
+                    <textarea name="desc" id="desc" cols="100" rows="5" align="left"></textarea>
+                </td>
+            </tr>
+            <tr style="height: 5;"></tr>
+            <tr>
+                <td>
+                    <label for="first">First Name : </label>
+                    <input type="text" name="First" id="first">
+                </td>
+                <td>
+                    <label for="Last">Last Name : </label>
+                    <input type="text" name="Last" id="Last">
+                </td>
+            </tr>
+            <tr style="height: 5;"></tr>
+            <tr>
+                <td>
+                    <label for="age">Age : </label>
+                    <input type="text" name="age" id="age">
+                </td>
+                <td>
+                    <label for="zip">Zip Code : </label>
+                    <input type="text" name="zip" id="zip">
+                </td>
+            </tr>
+        </form>
+    </table>
+    <div align="center">
+        <td >
+            <button type="submit" name="submit" id="submit">Click to submit</button>
+            <button type="reset" name="clear" id="clear">Clear form</button>
+        </td>
+    </div>
+</body>
+</html>

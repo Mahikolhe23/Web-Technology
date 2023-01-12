@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumofdigit() {
+            document.getElementById("div").innerHTML = "";
+            document.getElementById("div2").innerHTML = "";
+            var n = parseInt(document.getElementById("num").value);
+            var sum = 0;
+            if (n < 1000 && n > 0) {
+                while (n > 0) {
+                    r = n % 10;
+                    sum = parseInt(sum + r);
+                    n = n / 10;
+                }
+                document.getElementById("div").innerHTML = "Sum of digit is :" + sum;
+            }
+            else
+                document.getElementById("div2").innerHTML = "Entered Value is out of range";
+
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q19. Write a program that accepts (from the html form) a positive integer less than 1000 and prints out the</p>
+    <label for="num">Enter Number : </label><input type="number" name="num" id="num"><br><br>
+    <button type="button" name="btn" id="btn" onclick="sumofdigit()">sum of digit</button><br><br>
+    <div id="div"> </div>
+    <div id="div2"></div>
+</body>
+
+</html>

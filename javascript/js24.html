@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id {
+            border: 2px solid black;
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            background-color: antiquewhite;
+        }
+    </style>
+    <script>
+        function show1() {
+            var p = document.getElementById("pass");
+            if (p.type == 'password') {
+                p.type = 'text';
+            } else {
+                p.type = 'password';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q24. Create a Login.html page that accepts username and password. Following are the validationsrequired: </p>
+    <ul>
+        <li>Both fields are mandatory</li>
+        <li>Username must be between 6 to 10 characters, all alphabetic.</li>
+        <li>Password should be greater than 8 characters, must contain a # and atleast one digit.</li>
+    </ul>
+    <div id="div"></div>
+    <form id="id">
+        <label for="user">Username : </label><input type="text" name="user" id="user" required
+            pattern="[a-zA-Z0-9]{6,10}"><br><br>
+        <label for="pass">Password : </label><input type="password" name="pass" id="pass" required minlength="8"
+            pattern="[a-zA-Z0-9#]"><br><br>
+        <label for="show">Show password</label> <input type="checkbox" name="show" id="show" onclick="show1()">
+        <button type="button" name="btn" id="btn">Submit</button>
+    </form>
+</body>
+
+</html>

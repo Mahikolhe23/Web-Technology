@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function digitsum() {
+            var n = parseInt(document.getElementById("num").value);
+            var sum = 0;
+            while (n != 0) {
+                var r = parseInt(n % 10);
+                sum = sum + r;
+                n = parseInt(n / 10);
+            }
+            document.getElementById("digit").innerHTML = "Sum of Digit is : " + sum;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q6. Write a program to find sum of digits of given five-digit number.</p>
+    <label for="num">Enter number</label>
+    <input type="number" name="num" id="num">
+    <button type="button" name="btn" id="btn" onclick=digitsum()>Print sum</button><br><br>
+    <div id="digit"></div>
+</body>
+
+</html>

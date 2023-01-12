@@ -1,0 +1,143 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1 {
+            text-align: right;
+        }
+
+        .b {
+            float: left;
+        }
+
+        body {
+            background-color: rgb(14, 119, 168);
+        }
+
+        fieldset {
+            border: 2px solid white;
+            background-color: rgb(14, 119, 168);
+        }
+    </style>
+
+</head>
+
+<body>
+    <fieldset style="width: 500px; height: 280px;">
+        <legend>Registration Details</legend>
+        <table align="center">
+            <tr>
+                <td class="b1">
+                    <label for="name">University: </label>
+                </td>
+                <td class="b">
+                    <input type="text" name="name" id="name">
+                </td>
+            </tr>
+            <tr style="height: 10;"></tr>
+            <tr>
+                <td class="b1">
+                    <label for="name">Institute: </label>
+
+                </td>
+                <td class="b">
+                    <input type="text" name="name" id="name">
+                </td>
+            </tr>
+            <tr style="height: 10;"></tr>
+            <tr>
+                <td class="b1">
+                    <label for="name">Branch: </label>
+                </td>
+                <td class="b"><select name="branch" id="branch">
+                        <option value="select">select</option>
+                        <option value="Mech">Mechanical</option>
+                        <option value="Civil">Civil</option>
+                        <option value="IT">IT</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="ET">ET</option>
+                    </select><br>
+                </td>
+            </tr>
+            <tr style="height: 10;"></tr>
+            <tr>
+                <td class="b1">
+                    <label for="degree">Degree: </label>
+                </td>
+                <td class="b">
+                    <select name="degree" id="degree">
+                        <option value="grad">Graduation</option>
+                        <option value="PG">Post-Graduation</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="Phd">PHD</option>
+                    </select>
+                    <input type="radio" name="option" id="degree">
+                    <label for="degree1">Persuing</label>
+                    <input type="radio" name="option" id="Degree2">
+                    <label for="Degree2">Comleted</label>
+                </td>
+            </tr>
+            <tr style="height: 10;"></tr>
+            <tr>
+                <td class="b1">
+                    <label for="cgpi">Average CGPI: </label>
+                </td>
+                <td class="b">
+                    <input type="number" name="cgpi" id="cgpi" size="5" min="5" max="10">
+                    <label for="sem">Upto</label>
+                    <input type="number" name="sem" id="sem" size="5" min="1" max="8"> Th semester
+                </td>
+            </tr>
+            <tr style="height: 10;"></tr>
+            <tr>
+                <td class="b1">
+                    <label for="exp">Experence: </label>
+                </td>
+                <td class="b">
+                    <select name="exp" id="exp">
+                        <option value=""></option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="height: 10;"></tr>
+            <tr>
+                <td class="b1">
+                    <label for="web">Your Website or Blog: </label>
+                </td>
+                <td class="b">
+                    <input type="text" name="web" id="web">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <div>
+        <button class="btn">
+            <a href="./first.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                </svg></a>
+        </button>
+        <button class="btn">
+            <a href="./nine.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg></a>
+        </button>
+    </div>
+</body>
+
+</html>

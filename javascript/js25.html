@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #me {
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px;
+            width: 500px;
+            height: 350px;
+        }
+    </style>
+    <script>
+        function nameval() {
+            var name = document.getElementById("cname").value;
+            if (name.length > 6) {
+                document.getElementById("div").innerHTML = "";
+                return true;
+            } else
+                document.getElementById("div").innerHTML = "Cust name cannot be < 6 characters";
+            return false;
+        }
+        function name1() {
+            var bdate = new Date(document.getElementById("date").value);
+            var sdate = new Date(document.getElementById("shipdate").value);
+            if (bdate.getTime() < sdate.getTime()) {
+                document.getElementById("div2").innerHTML = "";
+                return true;
+            } else
+                document.getElementById("div2").innerHTML = "Billing date cannot be greater than shipping date";
+            return false;
+        }
+        function showdata() {
+            if (nameval() && name1()) {
+                var bdate = new Date(document.getElementById("date").value);
+                var sdate = new Date(document.getElementById("shipdate").value);
+                var oId = parseInt(document.getElementById("oId").value);
+                var total = parseInt(document.getElementById("order").value);
+                var bd = bdate.getFullYear() + "-" + bdate.getMonth() + "-" + bdate.getDay();
+                var sd = sdate.getFullYear() + "-" + sdate.getMonth() + "-" + sdate.getDay();
+                document.getElementById("d1").innerHTML = "Order Id : " + oId;
+                var c = document.getElementById("cname").value;
+                var bdt = bdate.getFullYear() + "-" + bdate.getMonth() + "-" + bdate.getDay();
+                var sdt = sdate.getFullYear() + "-" + sdate.getMonth() + "-" + sdate.getDay()
+                document.getElementById("d2").innerHTML = "Cust Name : " + c;
+                document.getElementById("d3").innerHTML = "Billing Date : " + bdt;
+                document.getElementById("d4").innerHTML = "Shipping Date : " + sdt;
+                document.getElementById("d5").innerHTML = "Order Total : " + total;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q25. Create a HTML page that accepts order details:</p>
+    <form id="me">
+        <label for="id">Order ID : </label> <input type="number" name="id" id="oId" min="1" required><br><br>
+        <label for="cust">Cust Name : </label> <input type="text" name="cname" id="cname" required>
+        <div id="div"></div><br>
+        <label for="date">Enter Billing date : </label> <input type="date" name="date" id="date" required>
+        <div id="div2"></div><br>
+        <label for="shipdate">Enter shipping date : </label><input type="date" name="shipdate" id="shipdate"
+            required><br><br>
+        <label for="order">Order Total : </label><input type="number" name="order" id="order" required><br><br>
+        <button type="button" name="btn" id=" btn" onclick="showdata()">display</button><br><br>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+    </form>
+</body>
+
+</html>

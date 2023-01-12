@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            border-radius: 10px;
+            border: 5px solid rgba(26, 71, 219, 0.788);
+            background-color: black;
+        }
+
+        legend {
+            background-color: rgba(26, 71, 219, 0.788);
+            color: white;
+        }
+
+        tr {
+            color: white;
+        }
+
+        td {
+            text-align: right;
+        }
+
+        button {
+            height: 25px;
+            width: 80px;
+            background-color: rgba(15, 57, 196, 0.788);
+            color: black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form style="background-color: black; width: 550px; height: 370px;">
+        <fieldset style="width: 500px;">
+            <legend>Name and address</legend>
+            <table align="center">
+                <tr>
+                    <td>SSN: </td>
+                    <td><input type="text" name="SSN" id="ssn"></td>
+                    <td style="background-color: blue">Fill in the Name and address</td>
+                </tr>
+                <tr style="height: 10px;"></tr>
+                <tr>
+                    <td>Full Name: </td>
+                    <td><input type="text" name="nm" id="nm"></td>
+                </tr>
+                <tr style="height: 10px;"></tr>
+                <tr>
+                    <td>Street and number:</td>
+                    <td><input type="text" name="str" id="str"></td>
+                </tr>
+                <tr style="height: 10px;"></tr>
+                <tr>
+                    <td>Postal code: </td>
+                    <td><input type="text" name="code" id="code"></td>
+                </tr>
+                <tr style="height: 10px;"></tr>
+                <tr>
+                    <td>City: </td>
+                    <td><input type="text" name="city" id="city"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset style="width: 365px;">
+            <legend>Username and Passward</legend>
+            <table align="center">
+                <tr>
+                    <td>Username:</td>
+                    <td>
+                        <input type="text" name="user" id="user">
+                    </td>
+                </tr>
+                <tr style="height: 10px;"></tr>
+                <tr>
+                    <td>Passward: </td>
+                    <td><input type="password" name="pass" id="pass"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <tr style="height: 20px;"></tr>
+        <button type="button" name="btn" id="btn">Register</button>
+    </form>
+</body>
+
+</html>

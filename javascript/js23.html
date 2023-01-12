@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form {
+            border: 2px solid black;
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+    <script>
+        function compute() {
+            document.getElementById("div").innerHTML = " ";
+            var a = parseInt(document.getElementById("amt").value);
+            var r = parseInt(document.getElementById("rate").value);
+            var y = parseInt(document.getElementById("year").value);
+            if (a < 1500000 && a > 0 && y > 7 && y < 15) {
+                var t = parseInt(((a * r * y) / 100) + a);
+                var m = parseInt((t / (y * 12)));
+                // console.log(m);
+                // console.log(t);
+                // console.log(t-a);
+                document.getElementById("monthly").value = m;
+                document.getElementById("total").value = t;
+                document.getElementById("pay").value = (t - a);
+            } else {
+                document.getElementById("div").innerHTML = "Loan  should be less than 15 lakh and period must in between 7 to 15 years";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        <b>Q23. Problem statement-2 : </b>Payment calculator <br>
+        Create a following web page and calculate Payment Information based on Loan Information.<br>Validate
+        Loan information textfields for numbers and Payment Information textfields should be uneditable.<br>The
+        other constraints are as follows :
+    <ul>
+        <li>Amount of Loan should not be more than 15 lakhs.</li><br>
+        <li>Repayment period should be between 7 yrs to 15 yrs.</li>
+    </ul>
+    </p>
+    <form id="form">
+        <table>
+            <th>
+                <h2>Enter Loan Information: </h2>
+            </th>
+            <tr>
+                <td>1) Amount of the loan(any currency):</td>
+                <td><input type="number" name="amt" id="amt"></td>
+            </tr>
+            <tr>
+                <td>2) Annual percentage rate of intrest: </td>
+                <td><input type="number" name="rate" id="rate"></td>
+            </tr>
+            <tr>
+                <td>3) Repayment period in years: </td>
+                <td><input type="number" name="year" id="year"></td>
+            </tr>
+            <tr style="height: 5px;"></tr>
+            <tr>
+                <td><button type="button" name="btn" id="btn" onclick="compute()">Compute</button>
+                    <B style="font-size: x-large;"> Payment Information:</B>
+                </td>
+            </tr>
+            <tr>
+                <td>4) Your monthly Payment will be: </td>
+                <td><input type="number" name="monthly" id="monthly"></td>
+            </tr>
+            <tr>
+                <td>5) Your total Payment will be:</td>
+                <td><input type="number" name="total" id="total"></td>
+            </tr>
+            <tr>
+                <td>6) Your total intrest Payment will be: </td>
+                <td><input type="number" name="pay" id="pay"></td>
+            </tr>
+        </table>
+    </form>
+    <div id="div"></div>
+</body>
+
+</html>

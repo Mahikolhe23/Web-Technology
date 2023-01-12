@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showarea() {
+            var l = parseInt(prompt("Enter the length for rectangle : "));
+            var w = parseInt(prompt("Enter the width for rectangle : "));
+            var a = parseInt(l * w);
+            document.getElementById("div").innerHTML = "Area of Rectangle - " + a;
+        }
+        function showc() {
+            var r = parseInt(prompt("Enter the radius of  circle : "));
+            var p = 2 * Math.PI * r;
+            var a = Math.PI * r * r;
+            document.getElementById("div").innerHTML = "Area of Circle - " + Math.round(a) + "<br>" + "circumference of circle - " + Math.round(p);
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q14. Create a custom object for rectangle and circle. Individual Rectangle objects should be able to store
+        dimension, and have methods
+        to print area and perimeter. Individual Circle objects should be able to store radius, and have methods to print
+        area and circumference.
+        Display dimensions, area and perimeter of rectangle and circle objects. Make use of pre-defined objects</p>
+    <button type="button" name="btn" id="r_btn" onclick="showarea()"> Rectangle</button>
+    <button type="button" name="btn" id="b_btn" onclick="showc()">Circle</button>
+    <div id="div"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<html>
+<head>
+<body>
+    <table width="300px" border="2px" style="background-color:rgb(233, 161, 161) ;">
+        <form>
+            <tr>
+                <td>
+                    <label for="nm">Name</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="nm" autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="emp">Employee code</label>
+                </td>
+                <td>
+                    <input type="text" name="Employee code" id="emp" size="5" pattern="[1-9][0-9]{4}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dept">Department</label>
+                </td>
+                <td style="height: 100;">
+                    <input type="radio" name="dept" id="Admin">
+                    <label for="Admin">Admin</label> <br>
+                    <input type="radio" name="dept" id="HR">
+                    <label for="HR">HR</label><br>
+                    <input type="radio" name="dept" id="Technical">
+                    <label for="Technical">Technical</label><br>
+                    <input type="radio" name="dept" id="Accounts">
+                    <label for="Accounts">Accounts</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="doj">Date of Joining</label>
+                </td>
+                <td>
+                    <table>
+                        <tr width="100">
+                            <td>
+                                <input type="number" name="dd" id="dd" style="width: 40px;" min="1" max="31">
+                            </td>
+                            <td>/</td>
+                            <td>
+                                <input type="number" name="mm" id="mm" style="width: 40px;" min="1" max="12">
+                            </td>
+                            <td>/</td>
+                            <td>
+                                <input type="number" name="yy" id="yy" style="width: 40px;"min="1999" max="2099">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dd">dd</label>
+                            </td>
+                            <td> </td>
+                            <td>
+                                <label for="mm">mm</label>
+                            </td>
+                            <td> </td>
+                            <td>
+                                <label for="yy">yyyy</label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="add">Address</label>
+                </td>
+                <td> <textarea name="address" id="add" cols="30" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tp">Training program attended</label>
+                </td>
+                <td>
+
+                    <input type="checkbox" name="html" id="html">
+                    <label for="html">HTML/DHTML</label><br>
+                    <input type="checkbox" name="java" id="java">
+                    <label for="java">JAVA</label><br>
+                    <input type="checkbox" name="client" id="clinet">
+                    <label for="client">CLIENT/SERVER</label><br>
+                    <input type="checkbox" name=".net" id="net">
+                    <label for="net">.NET</label><br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tpa">Training Programmes need to attend</label>
+                </td>
+                <td>
+                    <select name="tpa" id="tpa">
+                        <option value="JAVASCRIPT">JAVASCRIPT</option>
+                        <option value="JSTRUSTS">JSTRUSTS</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mail">Send the Info at</label>
+                </td>
+                <td><span style="color: blue;"><u>empinfo@patni.com</u></span></td>
+            </tr>
+        </form>
+    </table>
+    <div>
+        <td>
+            <button type="submit" name="submit" id="submit">Register</button>
+            <button type="reset" name="clear" id="clear">Clear form</button>
+        </td>
+    </div>
+</body>
+</head>
+</html>

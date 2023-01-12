@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class employee {
+            constructor(empid, empname, salary) {
+                this.empid = empid;
+                this.empname = empname;
+                this.salary = salary;
+            }
+        }
+        var arr = [];
+        var a = { empid: 10, empname: "Mahi@1", salary: 25000 };
+        var b = { empid: 11, empname: "Mahi@2", salary: 26000 };
+        var c = { empid: 12, empname: "Mahi@3", salary: 27000 };
+        var d = { empid: 13, empname: "Mahi@4", salary: 28000 };
+        arr.push(a);
+        arr.push(b);
+        arr.push(c);
+        arr.push(d);
+        function display() {
+            var str = "<table border='2'><tr><th>Emp id</th><th>Emp name</th><th>Salary</th></tr>";
+            for (var ob of arr) {
+                str += `<tr><td>${ob.empid}</td><td>${ob.empname}</td><td>${ob.salary}</td>`
+                // str += `<td><button type="button" name="btn1" id="del" onclick="deleteproduct(${ob.empid})">delete</button></td></tr>`
+            }
+            str += "</table>";
+            document.getElementById("div").innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q13. Create an array that holds 4 employee objects and displays each emp detail in a table. Employee details
+        could be empid, empname and salary. Use for each loop to inspect all properties of each object</p>
+    <button type="button" name="btn" id="btn" onclick="display()">display</button>
+    <div id="div"></div>
+</body>
+
+</html>

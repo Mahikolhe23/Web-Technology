@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #me {
+            border: 2px solid blue;
+            height: 100px;
+            width: 400px;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        function showname() {
+            document.getElementById("div").innerHTML = "";
+            var arr = ["mahi", "mukesh", "abhi", "kunal", "rahul", "anil", "uday"];
+            var str = "";
+            for (var i = 0; i < arr.length - 1; i++) {
+                str += arr[i].toUpperCase() + ",";
+            }
+            str += arr[arr.length - 1].toUpperCase();
+            document.getElementById("div").innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q20. Assume i have an array of member names. Read the array and display all member names as a string
+        delimited by comma all in uppercase</p>
+    <form id="me">
+        <h3> <b>Members of my Group are : <button type="button" name="btn" id="btn" onclick="showname()">Show
+                    Name</button><br></b></h3>
+        <div id="div"></div>
+    </form>
+</body>
+
+</html>

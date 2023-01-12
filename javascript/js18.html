@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #me {
+            border: 2px solid blue;
+            width: 700px;
+            height: 220px;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function search1() {
+            var str = document.getElementById("nm").value;
+            var substr = document.getElementById("nm2").value;
+            var repstr = document.getElementById("nm3").value;
+            var op = document.getElementsByName("b1");
+            for (var i = 0; i < op.length; i++) {
+                if (op[i].checked) {
+                    switch (op[i].id) {
+                        case 'search':
+                            document.getElementById("ans").value = str.includes(substr);
+                            break;
+                        case 'upper':
+                            document.getElementById("ans").value = str.toUpperCase();
+                            break;
+                        case 'Lower':
+                            document.getElementById("ans").value = str.toLowerCase();
+                            break;
+                        case 'Trim':
+                            document.getElementById("ans").value = str.trim();
+                            break;
+                        case 'concat':
+                            document.getElementById("ans").value = str.concat(repstr);
+                            break;
+                        case 'replace':
+                            document.getElementById("ans").value = str.replace("abc",repstr);
+                            break;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q18. Create the HTML form given below. Use JS to manipulate strings. Display the output below the button</p>
+    <form id="me">
+        <label for="nm">Enter String : </label><input type="text" name="nm1" id="nm"><br><br>
+        <label for="nm2">Enter Sub-String : </label> <input type="text" name="nm2" id="nm2"><br><br>
+        <label for="nm3">Replace with String</label> <input type="text" name="nm3" id="nm3"><br><br>
+        <input type="radio" name="b1" id="search">Search
+        <input type="radio" name="b1" id="upper">To upper Case
+        <input type="radio" name="b1" id="Lower"> To Lower Case
+        <input type="radio" name="b1" id="Trim"> Trim Space
+        <input type="radio" name="b1" id="concat"> Concatenate
+        <input type="radio" name="b1" id="replace"> Replace <br><br>
+        <button type="button" id="btn" onclick="search1()">Submit Querry</button> <br> <br>
+        <label for="ans">Ans : </label> <input type="text" name="ans" id="ans">
+    </form>
+</body>
+
+</html>

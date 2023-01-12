@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function maxnum() {
+            //take input from user
+            var num1 = parseInt(prompt("Enter the first number : "));
+            var num2 = parseInt(prompt("Enter the second number : "));
+            var num3 = parseInt(prompt("Enter the third number : "));
+            //check max of them
+            if (num1 >= num2 && num1 >= num3) {
+                max = num1;
+            }
+            else if (num2 >= num1 && num2 >= num3) {
+                max = num2;
+            } else
+                max = num3;
+            alert("Maximum Number is : " + max);
+            //document.getElementById("ii").innerHTML="tfh"+ max;
+            //getElementById("ii").innerHTML = max;
+        }
+    </script>
+    <p>Q1. Write a program to accept three positive numbers and output the largest of them</p><br>
+    <button type="button" name="btn" id="btn" onclick="maxnum()">Find Maximum Number</button>
+</body>
+
+</html>

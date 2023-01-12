@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ci() {
+            var p = parseInt(document.getElementById("p").value);
+            var r = parseInt(document.getElementById("r").value);
+            var n = parseInt(document.getElementById("n").value);
+            var ci = parseInt((Math.pow((1 + r / 100), n) * p) - p);
+            document.getElementById("div").innerHTML = "Calculate Compound Interest :" + ci;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q9. Create a web page to calculate the Compound Interest using the formula given below: </p>
+    <label for="p">Enter Principle amount</label>
+    <input type="number" name="p" id="p"><br><br>
+    <label for="r">Rate of Interest</label>
+    <input type="number" name="r" id="r"><br><br>
+    <label for="n">Number of Years</label>
+    <input type="number" name="n" id="n">
+    <button type="button" name="btn" id="cal" onclick="ci()">CI</button><br><br>
+    <div id="div"></div>
+</body>
+
+</html>

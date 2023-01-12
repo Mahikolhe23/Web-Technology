@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #me {
+            border: 2px solid blue;
+            width: 600px;
+            height: 350px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+
+        function validateEmail() {
+            var e = document.getElementById("mail").value;
+            if (e.includes("@company.com")) {
+                document.getElementById("errorMail").innerHTML = "";
+                return true;
+            }
+            else {
+                document.getElementById("errorMail").innerHTML = "(Use format name@company.com)";
+                return false;
+            }
+        }
+        function validateNumber() {
+            var n = document.getElementById("num").value;
+            if (n > 1 && n < 100) {
+                document.getElementById("errorNum").innerHTML = "";
+                return true;
+            }
+            else {
+                document.getElementById("errorNum").innerHTML = "(A number between 1 and 100)";
+                return false;
+            }
+        }
+        function sendData() {
+            var nm = document.getElementById("name").value;
+            var gen = document.getElementsByName("gen");
+            for (var i = 0; i < gen.length; i++) {
+                if (gen[i].checked) {
+                    g = gen[i].value;
+                }
+            }
+            var d = new Date(document.getElementById("dob").value);
+            var dob = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDay();
+            var foodarr = document.getElementsByName("food");
+            for (var i = 0; i < foodarr.length; i++) {
+                if (foodarr[i].checked) {
+                    f = foodarr[i].value;
+                }
+            }
+            var n = document.getElementById("num").value;
+            var e = document.getElementById("mail").value;
+
+            if (validateEmail() && validateNumber()) {
+                document.getElementById("d1").innerHTML = nm;
+                document.getElementById("d2").innerHTML = dob;
+                document.getElementById("d3").innerHTML = e;
+                document.getElementById("d4").innerHTML = g;
+                document.getElementById("d5").innerHTML = n;
+                document.getElementById("d6").innerHTML = f;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <p>Q26. Create a HTML page that will display the following form and on clicking the button, the details will be
+        listed as shown. Also create an object with all details from form, show them in new window thru the
+        newly created object</p>
+    <form id="me">
+        <table>
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" name="name" id="name" required maxlength="10" pattern="[a-zA-Z]"></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Birth Date:</label></td>
+                <td><input type="date" name="dob" id="dob" required></td>
+            </tr>
+            <tr>
+                <td><label for="mail">Email Address:</label></td>
+                <td><input type="text" name="mail" id="mail" required></td>
+                <td>
+                    <div id="errorMail"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td><input type="radio" name="gen" id="male" value="male">Male<br>
+                    <input type="radio" name="gen" id="female" value="female">Female
+                </td>
+            </tr>
+            <tr>
+                <td><label for="num">Lucky number:</label></td>
+                <td><input type="number" name="num" id="num" required minlength="4" maxlength="4"></td>
+                <td>
+                    <div id="errorNum"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="foods">Favorite Foods:</label></td>
+                <td><input type="radio" name="food" id="pizza" value="pizza">Pizza <br>
+                    <input type="radio" name="food" id="pasta" value="pasta">Pasta <br>
+                    <input type="radio" name="food" id="chinese" value="chinese"> Chinese
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" name="btn" id="btn" onclick="sendData()">Send Data</button></td>
+            </tr>
+        </table>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <div id="d6"></div>
+    </form>
+</body>
+
+</html>

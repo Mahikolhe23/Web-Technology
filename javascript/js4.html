@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function operation() {
+            n1 = parseInt(document.getElementById("n1").value);
+            n2 = parseInt(document.getElementById("n2").value);
+            o1 = document.getElementById("op1").value;
+            switch (o1) {
+                case '+':
+                    document.getElementById("d").innerHTML = "Sum of number is : " + (n1 + n2);
+                    break;
+                case '-':
+                    document.getElementById("d").innerHTML = "Subtraction of number is : " + (n1 - n2);
+                    break;
+                case '*':
+                    document.getElementById("d").innerHTML = "Multiplication of number is : " + (n1 * n2);
+                    break;
+                case '/':
+                    document.getElementById("d").innerHTML = "Division of number is : " + (n1 / n2);
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>Q4. Write a function that accepts two numbers and a operator like (+,-,*, /) from user and performs the
+        appropriate operation indicated by the operator</p>
+    <label for="n1">Enter number1 : </label>
+    <input type="number" name="n1" id="n1"><br><br>
+    <label for="n2">Enter number2 : </label>
+    <input type="number" name="n2" id="n2"><br><br>
+    <label for="op1">Enter operation: </label>
+    <input type="text" name="op1" id="op1"><br><br>
+    <button type="button" name="btn" id="btn" onclick="operation()"> Click to show Result</button>
+    <div id="d"></div>
+</body>
+
+</html>
