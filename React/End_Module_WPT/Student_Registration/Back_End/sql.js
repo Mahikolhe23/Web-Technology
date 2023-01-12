@@ -4,7 +4,7 @@ const connection = mysql.createConnection({
     HOST: "localhost",
     USER: "root",
     PASSWORD: "root123",
-    PORT: "3307",
+    PORT: "3306",
     database: "wpt"
 });
 const con = connection.connect((err) => {
