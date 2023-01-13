@@ -1,16 +1,17 @@
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-    HOST: "localhost",
-    USER: "root",
-    PASSWORD: "root123",
-    PORT: "3306",
-    database: "wpt"
+    host: "localhost",
+    user: "newuser1",
+    password: "Root@123",
+    port: "3306",
+    database: "demo"
 });
 const con = connection.connect((err) => {
     if (err) {
-        console.log("-------err not connect to sql--------");
+        console.log("-------not connected to sql--------");
         console.log(err);
+        console.log("-------not connected to sql--------");
     } else {
         console.log("Connected to DB");
     }

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 function NavBar() {
     return (
         <div>
-            <h1>Welcome To Student Registration Portal</h1>
-            <Link to="/home"><button>Home</button></Link> &nbsp;&nbsp;
-            {/* <Link to="/details"><button>Details</button></Link>&nbsp;&nbsp;&nbsp;
-            <Link to="/login"><button>LOGIN</button></Link> */}
+            <Link to="/"><button type='button'></button></Link>
+            <Link to="/registration"><button type='button'>Register</button></Link>
+            <Link to="/login"><button type='button'>Login</button></Link>
+            <Link to="/display"><button type='button'>Display</button></Link>
         </div>
     )
 }

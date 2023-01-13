@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 //import from sql.js connection
-const SQLConnect = require("./sql");
+const SQLConnect = require("./connection/sql");
 
 // express obj
 const app = express();
@@ -23,15 +23,14 @@ app.get("/student/data", (req, res) => {
     //fire querry to database with the help of connection obj
     SQLConnect.query("select* from student", (err, result) => {
         if (err) {
-            console.log("--------errr from db-------");
+            console.log("--------error in querry-------");
             console.log(err);
+            console.log("--------error in querry------");
         } else {
-            res.send(result);
+            res.json(result);
         }
     })
 })
-
-
 app.listen((4000), () => {
     console.log("running on 4000");
 })
