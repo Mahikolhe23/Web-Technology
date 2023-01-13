@@ -42,7 +42,7 @@ function Display() {
           </tr>
         </thead>
         <tbody>
-          {rendeList()};
+          {rendeList()}
         </tbody>
       </table>
     </div>

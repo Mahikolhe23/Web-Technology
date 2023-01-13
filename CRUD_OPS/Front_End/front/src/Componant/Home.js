@@ -1,20 +1,18 @@
-import Register from "./Register";
-import Login from "./Login";
-import NavBar from "./NavBar";
-// import './Home.css'
-import Display from "./Display";
+import React from 'react'
+import { Link } from "react-router-dom";
+
 function Home() {
     return (
-        <div className="App">
+        <div>
             <h1>Welcome to Student Registration Portal</h1>
-            <NavBar></NavBar>
-            {/* <div class="wrapper">
-                <div className="nav"><Login></Login></div>
-                <div className="main"><Register></Register></div>   
-                <div className="second"><Display></Display></div>
-            </div> */}
+            <div>
+                <Link to="/"><button type='button'>Home</button></Link>
+                <Link to="/registration"><button type='button'>Register</button></Link>
+                <Link to="/login"><button type='button'>Login</button></Link>
+                <Link to="/display"><button type='button'>Display</button></Link>
+            </div>
         </div>
-    );
+    )
 }
 
-export default Home;
+export default Home
